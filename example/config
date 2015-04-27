@@ -1,0 +1,11 @@
+[core]
+debug = 1
+compress_response = 0
+port = 5050
+address = 127.0.0.1
+#address = 0.0.0.0
+
+[host]
+local = 127.0.0.1:5050
+target = www.sznewworld.net
+replace = 1
