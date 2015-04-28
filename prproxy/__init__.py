@@ -7,7 +7,7 @@
 #  Created Time: 2015/04/16 21:55
 ###===========================###
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 from tornado.web import Application
 

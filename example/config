@@ -9,3 +9,6 @@ address = 127.0.0.1
 local = 127.0.0.1:5050
 target = www.sznewworld.net
 replace = 1
+
+[other]
+block_ext = mp4,flv,swf,zip,rar,pdf,doc

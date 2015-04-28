@@ -24,6 +24,11 @@ class ReverseProxy(RequestHandler):
            and self.request.host != configs.get('host', 'local'):
             self.send_error(400)
             return
+        if configs.get('other', 'block_ext', fallback=False) \
+           and '.' in url \
+           and url.rsplit('.', 1)[1] in configs.get('other', 'block_ext').replace(' ', '').split(','):
+            self.send_error(403)
+            return
 
         self.request.headers['Host'] = configs.get('host', 'target')
         request = HTTPRequest(
